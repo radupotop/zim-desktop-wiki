@@ -30,6 +30,9 @@ It allows easy editing of Mermaid diagrams.
     }
 
     ## Disabled because generating SVGs is buggy.
+    ## Sequence diagrams work fine, but Flowcharts and Class diagrams fail to
+    ## render labels.
+
     # plugin_preferences = (
     #     # key, type, label, default
     #     (
