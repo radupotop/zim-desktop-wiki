@@ -84,8 +84,9 @@ class MermaidDiagramGenerator(ImageGeneratorClass):
 		try:
 			diag = Application(self.diagcmd)
 			diag.run((self.mmdfile, '-o', self.imgfile))
-		except ApplicationError:
-			return None, None  # Sorry, no log
+		except ApplicationError as e:
+			logger.debug('Generating diagram failed with error: %s', e)
+			return None, None
 		else:
 			return self.imgfile, None
 
